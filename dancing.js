@@ -13,50 +13,51 @@ class Animation{
     let index=floor(this.index)%this.sprite.length;
     for(let i =0;i<this.sprite[index].length;i++){
       for(let j =0;j<this.sprite[index][i].length;j++){
+	noStroke();
         if(this.sprite[index][i][j]=="&"){
           
-          noStroke();
+
           fill(0);
           rect(5*j,10*i,5,10);
         }
         else if(this.sprite[index][i][j]=="@"){
-          noStroke();
+          
           fill(31,16,6 );
           rect(5*j,10*i,5,10);
         }
         else if(this.sprite[index][i][j]=="."){
-          noStroke();
+         
           fill(255,234,200);
           rect(5*j,10*i,5,10);
         }
         else if(this.sprite[index][i][j]=="/"){
-          noStroke();
+          //noStroke();
           fill(255,125,74);
           rect(5*j,10*i,5,10);
         }
         else if(this.sprite[index][i][j]=="("||this.sprite[index][i][j]=="#"){
-          noStroke();
+          //noStroke();
           fill(20,10,6);
           rect(5*j,10*i,5,10);
         }
         else if(this.sprite[index][i][j]=="*"){
-          noStroke();
+          //noStroke();
           fill(250,200,108);
           rect(5*j,10*i,5,10);
         }
         else if(this.sprite[index][i][j]==" "){
-          noStroke();
+          //noStroke();
           fill(200);
           rect(5*j,10*i,5,10);
         }
         else if(this.sprite[index][i][j]=="%"){
-          noStroke();
+          //noStroke();
           fill(36,28,12);
           rect(5*j,10*i,5,10);
         }
 
         else if(this.sprite[index][i][j]=="$"){
-          noStroke();
+          //noStroke();
           fill(105,5,1);
           rect(5*j,10*i,5,10);
         }
@@ -73,7 +74,7 @@ let animation;
 function setup(){
 	createCanvas(1000,1500);
 	frameRate(60);
-	animation=new Animation(animate,1,0,0,5);
+	animation=new Animation(animate,1.5,0,0,5);
 }
 function draw(){
 	background(255);
